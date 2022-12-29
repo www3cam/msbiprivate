@@ -397,11 +397,10 @@ def sbi_macro(X, boundmin, boundmax, prior, generator, netparams = None, num_rou
         
         posteriors.append(posterior)
         
-        
+        samples = posterior.sample((10000,), x=Xtorch)            
+        sampnum = samples.numpy()        
         
         if folder != None:
-            samples = posterior.sample((10000,), x=Xtorch)            
-            sampnum = samples.numpy()
             np.savetxt(folder + '/thetas'+method+'.csv', sampnum, delimiter = ',')
                         
         for r in range(num_rounds - 1):
@@ -426,10 +425,11 @@ def sbi_macro(X, boundmin, boundmax, prior, generator, netparams = None, num_rou
             print("Parameter Standard Deviations:")
             print(stdvec)
             
+            samples = posterior.sample((10000,), x=Xtorch)
+            sampnum = samples.numpy()
+            
             #save data to disk
             if folder != None:
-                samples = posterior.sample((10000,), x=Xtorch)
-                sampnum = samples.numpy()
                 np.savetxt(folder + '/thetas'+method+'.csv', sampnum, delimiter = ',')
         return sampnum, posteriors
         
@@ -467,9 +467,10 @@ def sbi_macro(X, boundmin, boundmax, prior, generator, netparams = None, num_rou
             print("Parameter Standard Deviations:")
             print(stdvec)
             
+            samples = posterior.sample((10000,), x=Xtorch)
+            sampnum = samples.numpy()
+            
             if folder != None:
-                samples = posterior.sample((10000,), x=Xtorch)
-                sampnum = samples.numpy()
                 np.savetxt(folder + '/thetas'+method+'.csv', sampnum, delimiter = ',')
 
 
