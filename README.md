@@ -4,6 +4,8 @@ This is repository that allows one to estimate macro models with the [simulation
 The code is straightforward to run.  The main function is `sbimacro.sbi_macro()`.  You run it like this:
 
 ```
+from sbiwrapper import sbi_macro
+
 def testfunct(params):
     xout = params[0]*torch.rand(100).reshape((1,-1))
     return xout
