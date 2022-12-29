@@ -23,10 +23,6 @@ from sbi.inference import ratio_estimator_based_potential, VIPosterior
 
 import multiprocessing
 
-#sbi .18
-
-
-
 
 from typing import Callable
 import pickle as pk
