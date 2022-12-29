@@ -13,7 +13,7 @@ from sbi.inference.base import infer
 import sbi
 from torch.distributions.distribution import Distribution
 import time
-from transformer_module import SummaryNetFeedForward
+from sbiwrapper.transformer_module import SummaryNetFeedForward
 
 from sbi import utils as utils
 from sbi.inference import SNPE, prepare_for_sbi, simulate_for_sbi, SNRE_B
