@@ -21,3 +21,5 @@ samps, post = sbi_macro(xin, boundmin1, boundmax1, prior1, testfunct, netparams 
 ```
 
 Note the `init_simulations` and the `round_simulations` are abnormally low for speed reasons.  These numbers should be in the 1000s at least.  
+
+This package has been lightly tested.  Feel free to report any errors here.  
