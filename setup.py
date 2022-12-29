@@ -7,5 +7,5 @@ setup(
    author='Cameron Fen',
    author_email='cameronfen@gmail.com',
    packages=['macrosbi'], 
-   install_requires=['sbi==0.18', 'torch', 'pyknos', 'nflows', 'numpy'], #external packages as dependencies
+   install_requires=['sbi', 'torch', 'pyknos', 'nflows', 'numpy'], #external packages as dependencies
 )
