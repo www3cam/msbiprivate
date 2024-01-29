@@ -1,0 +1,117 @@
+Starting preprocessing of the model file ...
+Found 40 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 2).
+Processing outputs ...
+done
+Preprocessing completed.
+
+{Index in position 1 exceeds array bounds (must not exceed 29).
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('get_the_name', '/usr/lib/dynare/matlab/get_the_name.m', 104)" style="font-weight:bold">get_the_name</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/get_the_name.m',104,0)">line 104</a>)
+    jj1 = estim_params_.param_vals(jj,1);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('check_prior_bounds', '/usr/lib/dynare/matlab/check_prior_bounds.m', 33)" style="font-weight:bold">check_prior_bounds</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/check_prior_bounds.m',33,0)">line 33</a>)
+        outside_bound_par_names{ii,1}=get_the_name(outside_bound_pars(ii),0,M_,estim_params_,options_);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_init', '/usr/lib/dynare/matlab/dynare_estimation_init.m', 361)" style="font-weight:bold">dynare_estimation_init</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/dynare_estimation_init.m',361,0)">line 361</a>)
+        check_prior_bounds(xparam1,bounds,M_,estim_params_,options_,bayestopt_)
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', '/usr/lib/dynare/matlab/dynare_estimation_1.m', 112)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/dynare_estimation_1.m',112,0)">line 112</a>)
+    dynare_estimation_init(var_list_, dname, [], M_, options_, oo_, estim_params_, bayestopt_);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', '/usr/lib/dynare/matlab/dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/dynare_estimation.m',105,0)">line 105</a>)
+    dynare_estimation_1(var_list,dname);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('usmodel_camtest.driver', '/home/cameron/Dynare/Fast_Bayes/+usmodel_camtest/driver.m', 627)" style="font-weight:bold">usmodel_camtest.driver</a> (<a href="matlab: opentoline('/home/cameron/Dynare/Fast_Bayes/+usmodel_camtest/driver.m',627,0)">line 627</a>)
+oo_recursive_=dynare_estimation(var_list_);
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', '/usr/lib/dynare/matlab/dynare.m', 299)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/dynare.m',299,0)">line 299</a>)
+evalin('base',[fname '.driver']) ;
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('simDSGEdata', '/home/cameron/Dynare/Fast_Bayes/simDSGEdata.m', 12)" style="font-weight:bold">simDSGEdata</a> (<a href="matlab: opentoline('/home/cameron/Dynare/Fast_Bayes/simDSGEdata.m',12,0)">line 12</a>)
+    dynare usmodel_camtest} 
+dynare usmodel_camtest_1
+Using 64-bit preprocessor
+Starting Dynare (version 4.6.0).
+Calling Dynare with arguments: none
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', '/usr/lib/dynare/matlab/dynare.m', 288)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/dynare.m',288,0)">line 288</a>)
+Dynare: preprocessing failed} 
+opentoline('/usr/lib/dynare/matlab/dynare.m',288,0)
+dynare usmodel_camtest_1
+Using 64-bit preprocessor
+Starting Dynare (version 4.6.0).
+Calling Dynare with arguments: none
+{Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', '/usr/lib/dynare/matlab/dynare.m', 288)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/dynare.m',288,0)">line 288</a>)
+Dynare: preprocessing failed} 
+dynare usmodel_camtest
+Using 64-bit preprocessor
+Starting Dynare (version 4.6.0).
+Calling Dynare with arguments: none
+
+[Warning: Some of the parameters have no value (ccs, cinvs, crdpi) when using initial_estimation_checks. If these parameters
+are not initialized in a steadystate file or a steady_state_model-block, Dynare may not be able to solve the model...] 
+Initial value of the log posterior (or likelihood): -34534.1635
+
+POSTERIOR KERNEL OPTIMIZATION PROBLEM!
+ (minus) the hessian matrix at the "mode" is not positive definite!
+=> posterior variance of the estimated parameters are not positive.
+You should try to change the initial values of the parameters using
+the estimated_params_init block, or use another optimization routine.
+[Warning: The results below are most likely wrong!] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', '/usr/lib/dynare/matlab/dynare_estimation_1.m', 315)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/dynare_estimation_1.m',315,0)">line 315</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', '/usr/lib/dynare/matlab/dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/dynare_estimation.m',105,0)">line 105</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('usmodel_camtest.driver', '/home/cameron/Dynare/Fast_Bayes/+usmodel_camtest/driver.m', 627)" style="font-weight:bold">usmodel_camtest.driver</a> (<a href="matlab: opentoline('/home/cameron/Dynare/Fast_Bayes/+usmodel_camtest/driver.m',627,0)">line 627</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', '/usr/lib/dynare/matlab/dynare.m', 299)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/dynare.m',299,0)">line 299</a>)] 
+[Warning: Matrix is singular, close to singular or badly scaled. Results may be inaccurate. RCOND = NaN.] 
+[> In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation_1', '/usr/lib/dynare/matlab/dynare_estimation_1.m', 338)" style="font-weight:bold">dynare_estimation_1</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/dynare_estimation_1.m',338,0)">line 338</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare_estimation', '/usr/lib/dynare/matlab/dynare_estimation.m', 105)" style="font-weight:bold">dynare_estimation</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/dynare_estimation.m',105,0)">line 105</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('usmodel_camtest.driver', '/home/cameron/Dynare/Fast_Bayes/+usmodel_camtest/driver.m', 627)" style="font-weight:bold">usmodel_camtest.driver</a> (<a href="matlab: opentoline('/home/cameron/Dynare/Fast_Bayes/+usmodel_camtest/driver.m',627,0)">line 627</a>)
+  In <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', '/usr/lib/dynare/matlab/dynare.m', 299)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('/usr/lib/dynare/matlab/dynare.m',299,0)">line 299</a>)
+] 
+
+RESULTS FROM POSTERIOR ESTIMATION
+parameters
+         prior mean     mode    s.d. prior pstdev
+
+crhoa        0.500   0.9977     NaN beta 0.2000 
+crhob        0.500   0.5799     NaN beta 0.2000 
+crhog        0.500   0.9957     NaN beta 0.2000 
+crhoqs       0.500   0.7165     NaN beta 0.2000 
+crhoms       0.500   0.0150     NaN beta 0.2000 
+crhopinf     0.500   0.0150     NaN beta 0.2000 
+crhow        0.500   0.0150     NaN beta 0.2000 
+cmap         0.500   0.0150     NaN beta 0.2000 
+cmaw         0.500   0.0150     NaN beta 0.2000 
+csadjcost    4.000   6.0144     NaN norm 1.5000 
+csigma       1.500   1.5000     NaN norm 0.3750 
+chabb        0.700   0.8800     NaN beta 0.1000 
+cprobw       0.500   0.8087     NaN beta 0.1000 
+csigl        2.000   1.9423     NaN norm 0.7500 
+cprobp       0.500   0.6000     NaN beta 0.1000 
+cindw        0.500   0.3243     NaN beta 0.1500 
+cindp        0.500   0.4700     NaN beta 0.1500 
+czcap        0.500   0.2696     NaN beta 0.1500 
+cfc          1.250   1.5000     NaN norm 0.1250 
+crpi         1.500   1.4880     NaN norm 0.2500 
+crr          0.750   0.8762     NaN beta 0.1000 
+cry          0.125   0.0593     NaN norm 0.0500 
+crdy         0.125   0.2347     NaN norm 0.0500 
+constepinf   0.625   0.7000     NaN gamm 0.1000 
+constebeta   0.250   0.7420     NaN gamm 0.1000 
+constelab    0.000   0.0000     NaN norm 2.0000 
+ctrend       0.400   0.3982     NaN norm 0.1000 
+cgy          0.500   0.5100     NaN norm 0.2500 
+calfa        0.300   0.2400     NaN norm 0.0500 
+
+standard deviation of shocks
+         prior mean     mode    s.d. prior pstdev
+
+ea           0.100   0.1000     NaN invg 2.0000 
+eb           0.100   0.1000     NaN invg 2.0000 
+eg           0.100   0.1000     NaN invg 2.0000 
+eqs          0.100   0.1000     NaN invg 2.0000 
+em           0.100   0.1000     NaN invg 2.0000 
+epinf        0.100   0.1000     NaN invg 2.0000 
+ew           0.100   0.1000     NaN invg 2.0000 
+
+
+Log data density [Laplace approximation] is NaN.
+
+[Warning: Some of the parameters have no value (ccs, cinvs, crdpi) when using stoch_simul. If these parameters are not
+initialized in a steadystate file or a steady_state_model-block, Dynare may not be able to solve the model...] 
+Total computing time : 0h00m01s
+Note: warning(s) encountered in MATLAB/Octave code
