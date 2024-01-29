@@ -1,0 +1,5 @@
+This folder comes mostly from the code and data of Liu and Plagborg Moller 2023: https://onlinelibrary.wiley.com/doi/full/10.3982/QE1810. 
+
+Their paperis built upon and contains a lot of code from Winberry 2018: https://onlinelibrary.wiley.com/doi/full/10.3982/QE740
+
+The main motifications come from the sim_hh.m code and the other matlab files that it calls
