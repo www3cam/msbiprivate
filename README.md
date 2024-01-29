@@ -1,5 +1,5 @@
 # macrosbi
-This is repository that allows one to estimate macro models with the [simulation based inference (SBI) library](https://www.mackelab.org/sbi/)
+This is a repository that allows one to estimate macro models with the [simulation based inference (SBI) library](https://www.mackelab.org/sbi/)
 
 The code is straightforward to run.  The main function is `sbimacro.sbi_macro()`.  You run it like this:
 
@@ -23,3 +23,7 @@ samps, post = sbi_macro(xin, boundmin1, boundmax1, prior1, testfunct, netparams 
 Note the `init_simulations` and the `round_simulations` are abnormally low for speed reasons.  These numbers should be in the 1000s at least.  
 
 This package has been lightly tested.  Feel free to report any errors here.  
+
+Additionally, this repository contains a ipynb file that also shows how to run the SBI estimation routine on real real data and a real model that has been solved.  
+
+Finally, the sbiwork folder contains some of the estimation routines I used to get my results.  
