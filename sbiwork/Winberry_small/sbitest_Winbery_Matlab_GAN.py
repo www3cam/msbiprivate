@@ -313,24 +313,6 @@ def range_bound_maf_nn(
     return build_fn
 
 
-'''
-nnet = range_bound_maf_nn()
-
-datax = genfromtxt('k.csv',delimiter=',')
-
-theta = torch.tensor([.7, .15, .2, .7], dtype = torch.float32).reshape(1,-1)
-
-tdata = torch.tensor(datax.ravel().reshape(1,-1), dtype = torch.float32)
-tdata2 = tdata.tile((2,1))
-theta2 = theta.tile((2,1))
-
-neuralnet1 = nnet(batch_theta = theta2, batch_x=tdata2)
-
-print(neuralnet1.sample(1, tdata2))
-
-
-'''
-
 eng = matlab.engine.start_matlab()
 
 def dynareSW(vecin):
@@ -355,13 +337,10 @@ num_rounds = 49
 writer = SummaryWriter()
 
 
-#vecin = [0.491692949132718, 0.348294030602838, 0.665231992527837,0.557840210250528,0.219038092751674,0.208093187137879,0.256317924519313,0.972635066864697,0.129121393775878,0.958628355930555,0.602064421092848,0.189932908919849,0.975604730882909,0.971780669995855,0.823984792605355,0.923696712042029,6.30438354438921,1.25790675965434,0.795613779353936,0.756803508578363,2.51006941593423,0.520392268102388,0.524504314169190,0.167907316224608,0.349694333086695,1.65696356884638,1.85846020646764,0.863865858276508,0.110347234197639,0.118157950835201,0.626466700805271,0.102616274945699,1.31631181800318,0.501327099746232,0.578101790099014,0.192430595782335]
-
 datax = np.loadtxt("/home/cameron/AnacondaProjects/Bayesian_DSGE_via_sbi/data/Winbery_dynare/winbery.csv", delimiter = ',') #genfromtxt('krbc.csv',delimiter=',')
 
 # s = prior2.sample()
 
-# z = prior2.log_prob(s)
 tdata = torch.tensor(datax.ravel().reshape(1,-1), dtype = torch.float32)
     
     # calfa = .01, csigma = .25, cfc = 1.0, cgy = .01, \
@@ -506,34 +485,4 @@ for r in range(num_rounds):
     # pk.dump(posterior, open(folder + "SW_posteriors_"+name+".pickle", "wb"))
     pk.dump(xsamp, open(folder + "SW_x_"+name+".pickle", "wb"))
     pk.dump(thetasamp, open(folder + "SW_thetas_value_"+name+".pickle", "wb"))
-    # fig, ax = analysis.pairplot(sampnum, 
-    #                          points=np.array([.24, 1.5, 1.5, .51, 6.0144, .6361, .8087, 1.9423, 
-    #                                           .6, .3243, .47, .2696, 1.488, .8762, .0593, .2347, .9977, 
-    #                                           .5799, .9957, .7165, 0.015, 0.015, 0.015, 0.015, 0.015, .7, 
-    #                                           .7420, 0., .3982, 0.4618, 1.8513, .6090, .6017, .2397, .1455, .2089]),
-    #                          labels=['calfa', 'csigma', 'cfc', 'cgy', 'csadjcost', 'chabb', 'crobw', 
-    #                                  'csigl', 'cprobp', 'cindw', 'cindp', 'czcap', 'crpi', 'crr', 'cry',
-    #                                  'crdy', 'crhoa', 'crhob', 'crhog', 'crhoqs', 'crhoms', 'crhopinf',
-    #                                  'crhow', 'cmap', 'cmaw', 'constepinf', 'constebeta', 'constelab',
-    #                                  'ctrend', 'ea', 'eb', 'eg', 'eqs', 'em', 'epinf', 'ew'],
-    #                          limits=[[0.01, 1.0],[0.25, 1.5], [1.0, 3.0], [0.01, 2.0], [2.0, 15.0],
-    #                                  [0.001, 0.99], [0.5, 0.95], [0.25, 10.0], [0.5, 0.95], [0.01, 0.99],
-    #                                  [0.01, 0.99], [0.01, 1.0], [1.0, 3.0], [0.5, 0.975], [0.001, 0.5],
-    #                                  [0.001, 0.5], [0.01, 0.9999], [0.01, 0.9999], [0.01, 0.9999], 
-    #                                  [0.01, 0.9999], [0.01, 0.9999], [0.01, 0.9999], [0.001, 0.9999],
-    #                                  [0.01, 0.9999], [0.01, 0.9999], [0.1, 2.0], [0.01, 2.0], [-10.0, 10.0],
-    #                                  [0.1, 0.8], [0.01, 3.0], [0.025, 5.0], [0.01, 3.0], [0.01, 3.0],
-    #                                  [0.01, 3.0], [0.01, 3.0], [0.01, 3.0]],
-    #                          ticks=[[0.01, 1.0],[0.25, 1.5], [1.0, 3.0], [0.01, 2.0], [2.0, 15.0],
-    #                                  [0.001, 0.99], [0.5, 0.95], [0.25, 10.0], [0.5, 0.95], [0.01, 0.99],
-    #                                  [0.01, 0.99], [0.01, 1.0], [1.0, 3.0], [0.5, 0.975], [0.001, 0.5],
-    #                                  [0.001, 0.5], [0.01, 0.9999], [0.01, 0.9999], [0.01, 0.9999], 
-    #                                  [0.01, 0.9999], [0.01, 0.9999], [0.01, 0.9999], [0.001, 0.9999],
-    #                                  [0.01, 0.9999], [0.01, 0.9999], [0.1, 2.0], [0.01, 2.0], [-10.0, 10.0],
-    #                                  [0.1, 0.8], [0.01, 3.0], [0.025, 5.0], [0.01, 3.0], [0.01, 3.0],
-    #                                  [0.01, 3.0], [0.01, 3.0], [0.01, 3.0]],
-    #                          points_colors='r',
-    #                          points_offdiag={'markersize': 6},
-    #                          figsize=[15., 15.])
-# method_fun: Callable = getattr(sbi.inference, 'SNPE')
-# inference = method_fun(prior)
+
