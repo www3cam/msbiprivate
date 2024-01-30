@@ -13,19 +13,17 @@ import time
 import multiprocessing as mp
 import random
 
-
 import pykalman
-
-
 import csv
-
 from autograd.numpy.random import default_rng
 
 def solve_and_sim_reiter(vec11):
+    #adapted from https://alisdairmckay.com/Notes/HetAgents/ code: https://alisdairmckay.com/files/HetAgentsPython3.zip
+    #to solve a HANK model via Reiter's method
     #solve
     # Parameters and setup
     iterations = 200
-    try:
+    try:#in case the model doesn't converge
         vecin = vec11.numpy().reshape(-1)
         beta = 0.97
         gamma = 2.0
@@ -57,7 +55,7 @@ def solve_and_sim_reiter(vec11):
         
         tiledGrid = np.tile(A,(2,1))
         
-           # #initialize
+        #initialize
         class Prices:
           def __init__(self,R,M=Mbar,Z=1.0,u=ubar,ulag=ubar):
               self.R = R
@@ -202,9 +200,6 @@ def solve_and_sim_reiter(vec11):
         Pr = Prices(Rstar)
     
         G[:] = SolveEGM(G,Pr)
-        
-        
-    
         
         D = GetStationaryDist(MakeTransMat(G,Pr.M))
         pB  = (1-ubar)  /(1-theta/Rstar)
