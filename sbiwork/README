@@ -1,0 +1,3 @@
+This section compains 3 selecte estimation procedure.  1 estimated HANK model on simulated data.  
+One estimated Smets-Wouters data on simulated data and one estimated Winberry Krusell-Smith model on both simulated and real (empirical) data.  
+Finally the forth folder generates a normalizing flow that maps a normal distribution to a distribution whose scatter plot spells the word HANK. 
