@@ -1,6 +1,7 @@
 clear all;
 
 % Simulate and estimate heterogeneous firm model
+% modified code from Liu, Plagborg-Moller 2023: https://onlinelibrary.wiley.com/doi/full/10.3982/QE1810
 
 model_name = 'hh';
 
