@@ -25,7 +25,7 @@ Note the `init_simulations` and the `round_simulations` are abnormally low for s
 This package has been lightly tested.  Feel free to report any errors here.  
 
 
-#Additional Information:
+# Additional Information:
 
 This repository contains a .ipynb file that also shows how to run the SBI estimation routine on real data and a real model that has been solved.  
 
